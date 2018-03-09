@@ -393,7 +393,7 @@ exec(open(os.path.join(spark_home, &#39;python/pyspark/shell.py&#39;)).read())</
 <li><em>&lt;conda-root-dir&gt;/envs/my_env/share/jupyter/kernels</em></li>
 </ul></li>
 <li><p>Into the <em>.../activate.d</em> directory, place a shell script containing:
-<code>export PATH=$PATH:$HOME/bin/spark/sparkX.Y.Z/bin</code></p>
+<code>export PATH=$HOME/bin/spark/sparkX.Y.Z/bin:$PATH</code></p>
 
 <p>Into the <em>.../deactivate.d</em> directory, place a shell script containing:
 <code>export PATH=$CONDA_PREFIX/bin:$CONDA_PATH_BACKUP</code></p>
