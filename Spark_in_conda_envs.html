@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Setup Spark for conda environments</title>
+<title>Setup Spark in conda environments</title>
 
 
 <style type="text/css">
@@ -328,11 +328,11 @@ kbd {
 
 <body>
 
-<h3 id="toc_0"><strong>SETTING UP PYSPARK TO WORK IN CONDA ENVIRONMENTS</strong></h3>
+<h3 id="toc_0"><strong>SETTING UP PYSPARK TO WORK IN A CONDA ENVIRONMENT</strong></h3>
 
 <p>The following recipe will allow you to install a version of PySpark on your machine and then use it in any conda environment, either in an interactive python command line session, an interactive ipython  session or in a jupyter console session or notebook.</p>
 
-<p>Steps 1 – 3 below only need to be done once when first installing a version of PySpark. Steps 4 and 5 are required for each conda environment wishing to use this version of PySpark.</p>
+<p>Steps 1 and 2 below only need to be done once when first installing a version of PySpark to the machine. Steps 3 and 4 are required for each conda environment wishing to use this version of PySpark.</p>
 
 <ol>
 <li><p>Make sure Spark is downloaded and expanded into <em>~/bin/spark/sparkX.Y.Z</em>,
@@ -363,7 +363,20 @@ sys.path.insert(0, os.path.join(spark_home, &#39;python/lib/&#39;, py4j_version)
 exec(open(os.path.join(spark_home, &#39;python/pyspark/shell.py&#39;)).read())</code></pre></div>
 
 <p>NOTE: Change X.Y.Z to the Spark version number.</p></li>
-<li><p>Inside the root conda directory (e.g. <em>~/anaconda</em>, <em>~/miniconda</em>, etc.) create a directory called <em>kernels/pysparkX.Y.Z</em>; i.e., <em>&lt;conda-root-dir&gt;/kernels/pysparkX.Y.Z</em>.  (The kernels subdirectory may already exist if there are already pyspark version kernels created.) Into this directory put the following into a file named <em>kernel.json</em>:</p>
+<li><p>Inside the specific conda environment directory (something like <em>&lt;conda-root-dir&gt;/envs/my_env</em>) make sure the following directories exist or create as needed:</p>
+
+<ul>
+<li><em>&lt;conda-root-dir&gt;/envs/my_env/etc/conda/activate.d</em></li>
+<li><em>&lt;conda-root-dir&gt;/envs/my_env/etc/conda/deactivate.d</em></li>
+<li><em>&lt;conda-root-dir&gt;/envs/my_env/share/jupyter/kernels</em></li>
+</ul></li>
+<li><p>Into the <em>.../activate.d</em> directory, place a shell script containing:
+<code>export PATH=$HOME/bin/spark/sparkX.Y.Z/bin:$PATH</code></p>
+
+<p>Into the <em>.../deactivate.d</em> directory, place a shell script containing:
+<code>export PATH=$CONDA_PREFIX/bin:$CONDA_PATH_BACKUP</code></p>
+
+<p>Into the <em>.../share/jupyter/kernels</em> directory put the following into a file named <em>kernel.json</em>:</p>
 
 <div><pre><code class="language-none">{
   &quot;argv&quot;: [
@@ -385,23 +398,6 @@ exec(open(os.path.join(spark_home, &#39;python/pyspark/shell.py&#39;)).read())</
 }</code></pre></div>
 
 <p>NOTE: Again, change X.Y.Z to the Spark version number.</p></li>
-<li><p>Inside the specific conda environment directory (something like <em>&lt;conda-root-dir&gt;/envs/my_env</em>) make sure the following directories exist or create as needed:</p>
-
-<ul>
-<li><em>&lt;conda-root-dir&gt;/envs/my_env/etc/conda/activate.d</em></li>
-<li><em>&lt;conda-root-dir&gt;/envs/my_env/etc/conda/deactivate.d</em></li>
-<li><em>&lt;conda-root-dir&gt;/envs/my_env/share/jupyter/kernels</em></li>
-</ul></li>
-<li><p>Into the <em>.../activate.d</em> directory, place a shell script containing:
-<code>export PATH=$HOME/bin/spark/sparkX.Y.Z/bin:$PATH</code></p>
-
-<p>Into the <em>.../deactivate.d</em> directory, place a shell script containing:
-<code>export PATH=$CONDA_PREFIX/bin:$CONDA_PATH_BACKUP</code></p>
-
-<p>From the command line, create a symlink:
-<code>ln -s &lt;conda-root-dir&gt;/kernels/pysparkX.Y.Z &lt;conda-root-dir&gt;/envs/my_env/share/jupyter/kernels/pysparkX.Y.Z</code></p>
-
-<p>NOTE: Once again, change X.Y.Z to the Spark version number.</p></li>
 </ol>
 
 <p>That&#39;s it. When in the activated conda environment, an interactive Spark-enabled command line python session can be started simply by issuing the <code>pyspark</code> command from the command line. An interactive Spark-enabled ipython or jupyter console session can be started with the command <code>ipython --profile=pysparkX.Y.Z</code> or <code>jupyter console --kernel pysparkX.Y.Z</code>, respectively. For a Spark-enabled notebook session, start jupyter notebook normally and then choose the Spark kernel, which should be labeled &#39;PySpark (Spark X.Y.Z)&#39;, when creating a new notebook.</p>
@@ -414,10 +410,12 @@ exec(open(os.path.join(spark_home, &#39;python/pyspark/shell.py&#39;)).read())</
 <li>Activate your conda environment.</li>
 <li><p>From the command line of this activated environment, execute:</p>
 
-<p><code>. \&lt;path-to-script\&gt;/setup_spark.sh X.Y.Z</code>,</p>
+<p><code>. &lt;path-to-script&gt;/setup_spark.sh X.Y.Z</code>,</p>
 
 <p>where X.Y.Z is the Spark version number. (But you already knew that, right?)</p></li>
 </ol>
+
+<p><strong>Note the following: Following the guide above will allow setting up several versions of Spark to work with the environment. The version can be set at runtime with the choice of kernel, whether from the command line using ipython or jupyter console or when creating a jupyter notebook. Creating the shell script in the <em>activate.d</em> directory as given above will put the last version of Spark set up for this environment first on the path. Therefore, the interactive Spark-enabled command line python session invoked by calling<code>pyspark</code>will call this version of Spark and no other unless the path is manually overridden.</strong></p>
 
 
 
