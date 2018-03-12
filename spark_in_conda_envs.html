@@ -415,7 +415,7 @@ exec(open(os.path.join(spark_home, &#39;python/pyspark/shell.py&#39;)).read())</
 <p>where X.Y.Z is the Spark version number. (But you already knew that, right?)</p></li>
 </ol>
 
-<p><strong>Note the following: Following the guide above will allow setting up several versions of Spark to work with the environment. The version can be set at runtime with the choice of kernel, whether from the command line using ipython or jupyter console or when creating a jupyter notebook. Creating the shell script in the <em>activate.d</em> directory as given above will put the last version of Spark set up for this environment first on the path. Therefore, the interactive Spark-enabled command line python session invoked by calling<code>pyspark</code>will call this version of Spark and no other unless the path is manually overridden.</strong></p>
+<p><strong>Note: Following the guide above will allow setting up several versions of Spark to work with the environment. The version can be set at runtime with the choice of kernel, whether from the command line using ipython or jupyter console or when creating a jupyter notebook. Creating the shell script in the <em>activate.d</em> directory as given above will put the last version of Spark set up for this environment first on the path. Therefore, the interactive Spark-enabled command line python session invoked by calling<code>pyspark</code>will call this version of Spark and no other unless the path is manually overridden.</strong></p>
 
 
 
