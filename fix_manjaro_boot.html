@@ -339,7 +339,7 @@ and find which drive letter the hard drive is assigned by running:</p>
 
 <p>and enter your luks passphrase.</p>
 
-<p>This will create the /dev/mapper/root device mapper used to access your decrypted root partition</p>
+<p>This will create the /dev/mapper/root device mapper used to access your decrypted root partition.</p>
 
 <p>Now mount this device:</p>
 
@@ -360,12 +360,12 @@ mount -o bind /dev dev/</code></pre></div>
 
 <p><code>ip link show</code></p>
 
-<p>to find the name of the ethernet adaptor (it could be something like eth0, but may be more complicated).</p>
+<p>to find the name of the ethernet adapter (it could be something like eth0, but may be more complicated).</p>
 
 <p>Then execute:</p>
 
 <div><pre><code class="language-none">chroot . /bin/bash  
-dhcpcd &lt;name of ethernet adaptor found above&gt;</code></pre></div>
+dhcpcd &lt;name of ethernet adapter found above&gt;</code></pre></div>
 
 <p>Execute the following commands.</p>
 
