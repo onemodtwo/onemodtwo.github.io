@@ -1,340 +1,609 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Legal Eagle</title>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+      body {
+        font-size: 14px;
+	font-family: 'Source Serif Pro', serif;
+        line-height: 1.6;
+        padding-top: 10px;
+        padding-bottom: 30px;
+      }
 
-<head>
+      hr {
+        padding: 0;
+        margin: 0;
+      }
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+      headline {
+        padding: 0;
+        margin: 0;
+      }
 
+      h1, h2, h3, h4, h5, h6 {
+        margin: 16px 0 8px;
+        padding: 0;
+	font-family: 'Source Serif Pro', serif;
+        font-weight: bold;
+        -webkit-font-smoothing: antialiased;
+        cursor: text;
+        position: relative; 
+      }
 
-
-<style type="text/css">
-body {
-  font-family: Helvetica, arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: white;
-  padding: 30px; }
-
-body > *:first-child {
-  margin-top: 0 !important; }
-body > *:last-child {
-  margin-bottom: 0 !important; }
-
-a {
-  color: #4183C4; }
-a.absent {
-  color: #cc0000; }
-a.anchor {
-  display: block;
-  padding-left: 30px;
-  margin-left: -30px;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0; }
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 20px 0 10px;
-  padding: 0;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  cursor: text;
-  position: relative; }
-
-h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
-  text-decoration: none; }
-
-h1 tt, h1 code {
-  font-size: inherit; }
-
-h2 tt, h2 code {
-  font-size: inherit; }
-
-h3 tt, h3 code {
-  font-size: inherit; }
-
-h4 tt, h4 code {
-  font-size: inherit; }
-
-h5 tt, h5 code {
-  font-size: inherit; }
-
-h6 tt, h6 code {
-  font-size: inherit; }
-
-h1 {
-  font-size: 28px;
-  color: black; }
-
-h2 {
-  font-size: 24px;
-  border-bottom: 1px solid #cccccc;
-  color: black; }
-
-h3 {
-  font-size: 18px; }
-
-h4 {
-  font-size: 16px; }
-
-h5 {
-  font-size: 14px; }
-
-h6 {
-  color: #777777;
-  font-size: 14px; }
-
-p, blockquote, ul, ol, dl, li, table, pre {
-  margin: 15px 0; }
-
-hr {
-  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
-  border: 0 none;
-  color: #cccccc;
-  height: 4px;
-  padding: 0;
-}
-
-body > h2:first-child {
-  margin-top: 0;
-  padding-top: 0; }
-body > h1:first-child {
-  margin-top: 0;
-  padding-top: 0; }
-  body > h1:first-child + h2 {
-    margin-top: 0;
-    padding-top: 0; }
-body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
-  margin-top: 0;
-  padding-top: 0; }
-
-a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
-  margin-top: 0;
-  padding-top: 0; }
-
-h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
-  margin-top: 0; }
-
-li p.first {
-  display: inline-block; }
-li {
-  margin: 0; }
-ul, ol {
-  padding-left: 30px; }
-
-ul :first-child, ol :first-child {
-  margin-top: 0; }
-
-dl {
-  padding: 0; }
-  dl dt {
-    font-size: 14px;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0;
-    margin: 15px 0 5px; }
-    dl dt:first-child {
-      padding: 0; }
-    dl dt > :first-child {
-      margin-top: 0; }
-    dl dt > :last-child {
-      margin-bottom: 0; }
-  dl dd {
-    margin: 0 0 15px;
-    padding: 0 15px; }
-    dl dd > :first-child {
-      margin-top: 0; }
-    dl dd > :last-child {
-      margin-bottom: 0; }
-
-blockquote {
-  border-left: 4px solid #dddddd;
-  padding: 0 15px;
-  color: #777777; }
-  blockquote > :first-child {
-    margin-top: 0; }
-  blockquote > :last-child {
-    margin-bottom: 0; }
-
-table {
-  padding: 0;border-collapse: collapse; }
-  table tr {
-    border-top: 1px solid #cccccc;
-    background-color: white;
-    margin: 0;
-    padding: 0; }
-    table tr:nth-child(2n) {
-      background-color: #f8f8f8; }
-    table tr th {
-      font-weight: bold;
-      border: 1px solid #cccccc;
-      margin: 0;
-      padding: 6px 13px; }
-    table tr td {
-      border: 1px solid #cccccc;
-      margin: 0;
-      padding: 6px 13px; }
-    table tr th :first-child, table tr td :first-child {
-      margin-top: 0; }
-    table tr th :last-child, table tr td :last-child {
-      margin-bottom: 0; }
-
-img {
-  max-width: 100%; }
-
-span.frame {
-  display: block;
-  overflow: hidden; }
-  span.frame > span {
-    border: 1px solid #dddddd;
-    display: block;
-    float: left;
-    overflow: hidden;
-    margin: 13px 0 0;
-    padding: 7px;
-    width: auto; }
-  span.frame span img {
-    display: block;
-    float: left; }
-  span.frame span span {
-    clear: both;
-    color: #333333;
-    display: block;
-    padding: 5px 0 0; }
-span.align-center {
-  display: block;
-  overflow: hidden;
-  clear: both; }
-  span.align-center > span {
-    display: block;
-    overflow: hidden;
-    margin: 13px auto 0;
-    text-align: center; }
-  span.align-center span img {
-    margin: 0 auto;
-    text-align: center; }
-span.align-right {
-  display: block;
-  overflow: hidden;
-  clear: both; }
-  span.align-right > span {
-    display: block;
-    overflow: hidden;
-    margin: 13px 0 0;
-    text-align: right; }
-  span.align-right span img {
-    margin: 0;
-    text-align: right; }
-span.float-left {
-  display: block;
-  margin-right: 13px;
-  overflow: hidden;
-  float: left; }
-  span.float-left span {
-    margin: 13px 0 0; }
-span.float-right {
-  display: block;
-  margin-left: 13px;
-  overflow: hidden;
-  float: right; }
-  span.float-right > span {
-    display: block;
-    overflow: hidden;
-    margin: 13px auto 0;
-    text-align: right; }
-
-code, tt {
-  margin: 0 2px;
-  padding: 0 5px;
-  white-space: nowrap;
-  border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
-  border-radius: 3px; }
-
-pre code {
-  margin: 0;
-  padding: 0;
-  white-space: pre;
-  border: none;
-  background: transparent; }
-
-.highlight pre {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px; }
-
-pre {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px; }
-  pre code, pre tt {
-    background-color: transparent;
-    border: none; }
-
-sup {
-    font-size: 0.83em;
-    vertical-align: super;
-    line-height: 0;
-}
-
-kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb
-}
-
-* {
-	-webkit-print-color-adjust: exact;
-}
-@media screen and (min-width: 914px) {
-    body {
-        width: 854px;
-        margin:0 auto;
-    }
-}
-@media print {
-	table, pre {
-		page-break-inside: avoid;
-	}
-	pre {
-		word-wrap: break-word;
-	}
-}
-</style>
-
-
-</head>
-
-<body>
-
-<h2 id="toc_0">Legal Eagle</h2>
-
-<p>coming soon...</p>
+      @media screen and (min-width: 900px) {
+        body {
+          width: 800px;
+          margin:0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <span class="headline"><b><i><font face="Source Serif Pro" size="+2">Legal
 
 
 
 
-</body>
 
+
+
+
+
+            Eagle&nbsp;&nbsp; &nbsp;&nbsp; </font></i><font
+          face="Source Serif Pro" size="+1">Zooming in on Supreme Court
+          decisions</font></b></span><br>
+    <hr size="2" width="100%"><font face="Source Serif Pro"><br>
+      I was a member of the Summer 2018 fellow cohort at Insight Data
+      Science. Insight is a program to transition scientists and others
+      with advanced degrees in quantitative disciplines into data
+      scientists in business and industry. A central part of the
+      fellowship are projects that the participants scope and execute to
+      demonstrate technical skill and, equally important, an awareness
+      of the applied, business value of their work. The projects unfold
+      from conception to completion in a brief three weeks, and it is
+      within this context and scope that this effort was undertaken.
+      This post discusses my project, the data used, and the methods
+      employed to build out the model.<br>
+      <br>
+      <i> Legal Eagle</i> aims to model through classification the
+      voting behavior of U.S. Supreme Court justices. Decisions by the
+      court have a broad and deep impact on the American political
+      system, society and economy, with the latter very often impacting
+      the wider global economy. A suggestive, though far from
+      exhaustive, list of the types of actors that follow the court
+      carefully and whose direct interests are affected by its decisions
+      includes advocacy groups of all kinds, political operatives and
+      lobbyists, businesses and their investors, and unions.<br>
+      <br>
+      A recent example of an impactful decision comes from the term
+      ending just this past June. In <i>Janus</i><i> v. AFSCME</i> the
+      court determined that individuals may opt out of paying dues or
+      equivalent fees to public-sector unions. This will have an
+      immediate impact of millions of dollars in lost revenues to these
+      unions, with the secondary effect of much reduced funding for
+      groups that depend on these unions for a significant fraction of
+      their revenue. (For more on these knock-on effects, see <a
+href="https://www.nytimes.com/2018/07/01/business/economy/unions-funding-political.html">this
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        article</a> in the <i>New York Times</i>.) Getting out in front
+      of these types of decisions, before they are rendered, can assist
+      interested or potentially impacted parties in planning and
+      responding to either favorable or unfavorable outcomes.<br>
+    </font>
+    <h4><font face="Source Serif Pro">Some motivation</font></h4>
+    <font face="Source Serif Pro">One of the features I was looking for
+      in choosing a project was a setting in which it made sense to
+      blend structured data with data features derived from text. A
+      project focused on law cases seemed a natural fit, as verbal
+      argument, whether given orally or delivered in writing, is central
+      to the enterprise. Along with this verbal component, every case
+      has certain structural features such as the nature of the parties
+      and the general issue area into which the case falls. And, of
+      course, the Supreme Court is the most compelling venue where legal
+      cases play out.<br>
+    </font>
+    <h4><font face="Source Serif Pro">The test subjects</font></h4>
+    <font face="Source Serif Pro">The units of analysis for this project
+      were individual Supreme Court justices. There are several reasons,
+      both substantive and practical, for this choice. While the court
+      decides as a body, and its members may influence each other to
+      some degree, justices are autonomous and decide each case
+      individually. Further, modeling a court, </font><font
+      face="Source Serif Pro"><font face="Source Serif Pro">if what we
+        mean by a "court" is a fixed set of nine justices, </font> is a
+      tricky proposition. Such an entity is ephemeral and never very
+      long lasting. In fact, the longest of these so-called "natural
+      courts" to occur since the 1820s was during the period 1994-2005,
+      after Justice Breyer was seated and before Justice Rehnquist died.
+      This span of only 11 terms limits the amount of data we could use
+      in a model of even the longest modern natural court. By contrast,
+      focusing on justices of long tenure generally allows us to benefit
+      from much additional data. Additionally, we can select a group of
+      justices that span much of the post-WWII era and a range of
+      judicial and political philosophies. The group modeled in this
+      project includes: William Brennan, Byron White, Thurgood Marshall,
+      Harry Blackmun, William Rehnquist, John Paul Stevens, Sandra Day
+      O'Connor, Antonin Scalia, Anthony Kennedy, Clarence Thomas, Ruth
+      Baider Ginsberg, and Stephen Breyer.<br>
+      <br>
+    </font> <img src="legaleagle_images/SC_justices.jpg" alt=""
+      width="733" height="391"><br>
+    <br>
+    <h4><font face="Source Serif Pro">The data</font></h4>
+    <font face="Source Serif Pro">Data was gathered on cases decided by
+      the Court from when Justice Brennan joined it in 1956 through the
+      2016 term. The structured data used in this project comes from the
+      <a href="http://www.supremecourtdatabase.org">Supreme Court
+        Database</a> project maintained by the Washington University Law
+      School. From this vast collection of information about Supreme
+      Court cases reaching back to the earliest days of the republic, I
+      have chosen six indicators: petitioner and respondent type, issue
+      area, how the lower court disposed of the case, the appellate
+      court circuit from which the case arose, and the manner in which
+      the Supreme Court took jurisdiction over the case. The target
+      variable, each justice's vote per case, was also derived from this
+      source.<br>
+      <br>
+      The text data is derived from oral argument transcripts, which are
+      stored in digital format at the <a href="https://www.oyez.org/">Oyez
+
+
+
+
+
+        Project</a>. Oyez is directed by the Cornell University Legal
+      Information Institute, Chicago-Kent College of Law, and
+      Justia.com. There are limitations with respect to these data, some
+      of which are covered in more detail below, but for now it is
+      noteworthy that the overall quantity of cases available for each
+      justice was limited by these transcripts and not by the database
+      indicators. The final number of cases for each justice is given in
+      the following table:<br>
+      <br>
+    </font>
+    <table style="border-collapse: collapse;" cellspacing="2"
+      cellpadding="10" align="center" width="339" height="657"
+      border="3">
+      <tbody>
+        <tr>
+          <td valign="middle" align="center" height="24"><b><font
+                face="Source Serif Pro">Justice</font></b><br>
+          </td>
+          <td valign="middle" align="center" height="24"><b>Number of
+              Cases</b><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="middle" height="24">William Brennan<br>
+          </td>
+          <td valign="middle" align="center" height="24">3927<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="middle" height="24">Byron White<br>
+          </td>
+          <td valign="middle" align="center" height="24">3700<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="middle" height="24">Thurgood Marshall<br>
+          </td>
+          <td valign="middle" align="center" height="24">2900<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="middle" height="24">Harry Blackmun<br>
+          </td>
+          <td valign="middle" align="center" height="24">2958<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="middle" height="24">William Rehnquist<br>
+          </td>
+          <td valign="middle" align="center" height="24">3589<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="middle" height="24">John Paul Stevens<br>
+          </td>
+          <td valign="middle" align="center" height="24">3358<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="middle" height="24">Sandra Day O'Connor<br>
+          </td>
+          <td valign="middle" align="center" height="24">2384<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="middle" height="24">Antonin Scalia<br>
+          </td>
+          <td valign="middle" align="center" height="24">2048<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="middle" height="24">Anthony Kennedy<br>
+          </td>
+          <td valign="middle" align="center" height="24">1840<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="middle" height="24">Clarence Thomas<br>
+          </td>
+          <td valign="middle" align="center" height="24">1416<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="middle" height="24">Ruth Baider Ginsberg<br>
+          </td>
+          <td valign="middle" align="center" height="24">1229<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="middle" height="24">Stephen Breyer<br>
+          </td>
+          <td valign="middle" align="center" height="24">1133<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <font face="Source Serif Pro"><br>
+      <br>
+      We see that there is a fairly wide range here, though in each case
+      we have at least as many cases as we might have gathered from one
+      natural court.<br>
+    </font>
+    <h4><font face="Source Serif Pro">Data preprocessing</font></h4>
+    <font face="Source Serif Pro">The six indicators taken from the
+      database are all categorical and some have many subcategories. In
+      a limited way I was able to collapse categories based upon my own
+      "subject matter expertise" (such as it is); however, this was
+      insufficient to wrangle these categories into a manageable number
+      to input into the classification model. In addition, for most
+      indicators, the distribution of cases across subcategories was
+      highly uneven. Ultimately, after initially combining certain
+      subcategories manually, these indicators were transformed via
+      impact or target encoding. In short, target encoding assigns to
+      each subcategory a weighted average of the average value for the
+      target variable within the subcategory and the average across all
+      subcategories. The weights are determined by a parameterized
+      function of the number of cases occurring within the subcategory.
+      No matter how these weights are chosen, the essential idea is that
+      the more cases within a subcategory, the more the weight is tilted
+      toward using the subcategory average and away from using the
+      global average. It is important to note that this fitting of coded
+      values to subcategories is done only on the training set, with the
+      test set subsequently transformed with these fitted values. For
+      this project, each justice's data were fitted and transformed
+      independently.<br>
+    </font><br>
+    <font face="Source Serif Pro"><font face="Source Serif Pro">Considerably
+
+
+        more effort went into processing the data derived from the oral
+        arguments. Many transcript records did not identify clearly
+        which person or persons addressing the court </font></font><font
+      face="Source Serif Pro"><font face="Source Serif Pro"><font
+          face="Source Serif Pro"><font face="Source Serif Pro">represented
+
+            which party</font></font>. For this technical reason, and to
+        treat each case similarly, I took only the parts of the
+        transcripts that correspond to what we can consider the main
+        arguments put forward by each party. What this leaves out are
+        the instances where the petitioner's advocate reserves a brief
+        portion of time to speak again after the respondent has
+        addressed the court or the uncommon instances where the court
+        allows a third party to address the court in support of one of
+        the parties. Therefore, for each case, we reduce the transcript
+        record to the periods during which the petitioner and respondent
+        are making their initial arguments to the court and any comments
+        or questions from the justices during these times.<br>
+        <br>
+        I created two types of features from these oral arguments:
+        text-derived metrics and vector representations of each argument
+        for each case. Both metrics and vectors are on a per party
+        basis, that is, for each of the petitioner and respondent
+        pleading before the court.<br>
+        <br>
+        Advocates are given a fixed time budget in which to present
+        their argument to the court. The justices spend a certain amount
+        of that time questioning the advocate or commenting on what has
+        been said. The metrics capture this aspect of the arguments by
+        (1) measuring the percentage of each advocate's time actually </font>spent
+
+      by the advocate speaking to the court and (2) the number of times
+      during the advocate's presentation that he or she was cut off
+      mid-sentence by one of the justices. Together these measures are
+      intended to gauge the reaction of the court to what is being said
+      before them, with the idea being that the more interruptions and
+      the more time spent by the justices talking to the advocate, the
+      less at least some of them are buying the argument being put
+      before them. These two measures per advocate yield four text
+      metrics per case. <br>
+      <br>
+      The vector representations of the text required more extensive
+      engineering. The goal was a set of four vectors to represent the
+      text spoken by each advocate to the court and that spoken by
+      justices to each advocate. The first step in this process was
+      concatenating the transcript dialog by speaker and, in the case of
+      justices, the target of that speech.&nbsp; We thus create four
+      "documents" per case. <br>
+      <br>
+      I looked at a few options for transforming these documents to
+      vector representations. My initial choice was to create an LDA
+      topic model from the collection of all case documents and then
+      represent each document as a vector of topics weights.</font><font
+      face="Source Serif Pro"><font face="Source Serif Pro"> </font>The
+      appeal of this approach is the interpretability of these
+      representations, as topics can be represented by their respective
+      dominant terms. I chose to decompose the corpus into 30 topics,
+      which would have given me a maximum of 120 features for a
+      classification model derived from these text vectors. The
+      distribution of these 30 topics appeared pretty good and many of
+      the topics seemed to cohere around reasonably themes, as can be
+      seen in the following diagram:<br>
+      <br>
+      <br>
+      <img src="legaleagle_images/lda_topic_21.png" alt="" width="800"
+        height="451"><br>
+    </font><br>
+    <font face="Source Serif Pro"><font face="Source Serif Pro"><br>
+        Unfortunately, the performance of the classifier model using
+        these vectors was very poor. There was little difference, if
+        any, between models that included these text-vector-derived
+        features and those that did not.<br>
+        <br>
+        Since I would not be able to leverage the nice interpretability
+        of a topic model, I next checked whether a simple approach using
+        TF-IDF vectors reduced in size via principal component analysis
+        might be reasonable. Reduction was essential because TF-IDF
+        vectors are as long as the vocabulary (thousands of words), and
+        vectors of anything approaching this length would be completely
+        inappropriate for this classification task. During the PCA
+        reduction it became obvious that no significant amount of
+        variance could be captured by a reasonable number of components,
+        so this approach was quickly abandoned.<br>
+        <br>
+        Having completed the sanity check described in the previous
+        step, I moved on to what became the ultimate approach for this
+        project. I converted each of the texts derived from the
+        transcripts to a vector of length 100 using the doc2vec variant
+        of the more well-known word2vec algorithm. Again, I was
+        motivated to keep the vector lengths modest, and since the
+        vocabulary gleaned from the transcript corpus is relatively
+        small (&lt; 70k words), a length of 100 seemed justifiable.<br>
+        <br>
+        In summary, for each case, 4 text metrics, 4 text vectors, and 6
+        structured variables were engineered. The metrics and structured
+        variables were themselves features in the classifier models
+        fitted. Each component of the text vectors appeared in those
+        models as a feature. The text metrics and text vectors for each
+        case are the same for every justice who participated in that
+        case. The structured encodings are specific to each justice.<br>
+      </font></font>
+    <h4><font face="Source Serif Pro"><font face="Source Serif Pro">Approach
+
+
+          to classification modeling</font></font></h4>
+    <font face="Source Serif Pro"><font face="Source Serif Pro">The
+        features were used in xgboost (boosted tree) classifier models
+        of each justice to predict their vote outcomes. I chose this
+        type of classifier because of its ability to handle data on all
+        scales and features that may be correlated. A fully analysis of
+        the correlation of features was not within the scope of this
+        project; however, with text vectors from both parties used as
+        inputs to the model likely encoding certain similarities (these
+        arguments do, after all, center on the same case), a method
+        robust even under correlation was a natural choice. <br>
+        <br>
+        Recall that a central motivation for this project was the
+        opportunity to blend structured data with unstructured text.
+        Therefore, more than simply constructing the best model, I
+        wanted to see the effect of these text features on the results.
+        To do so, I built three models per justice: one which included
+        no features derived from text; one which added to this "base"
+        model the text metrics and the vector representations of the
+        arguments made by the advocates to the court; and a final model
+        which added to the previous the vector representations of the
+        questions and comments to each advocate from the justices.<br>
+        <br>
+      </font></font><font face="Source Serif Pro"><font face="Source
+        Serif Pro">For most of the justices in the test group, even the
+        base model met or outperformed a baseline guess based upon the
+        justice's historical track record. For example, across the
+        nearly 4000 cases in our data for Justice Brennan, he voted with
+        the petitioner approximately 58% of the time. All of our models
+        for him had an accuracy score greater than 0.58, so would
+        predict his vote better than merely guessing based on a weighted
+        coin flip that came up heads (where heads means petitioner wins)
+        58% of the time. The following table gives the full picture of
+        how each model performed</font></font><font face="Source Serif
+      Pro"><font face="Source Serif Pro"><font face="Source Serif Pro"><font
+            face="Source Serif Pro"> for all the justices </font></font>
+        <i>relative to this coin flip standard</i>. Note that the
+        horizontal line at 0 represents the coin flip accuracy for each
+        justice. <br>
+        <br>
+        <img src="legaleagle_images/models_v_coin.png" alt=""
+          width="800" height="373"><br>
+        <br>
+        There is no natural preference for favoring a model's
+        performance on precision or recall, so if we would like a metric
+        for inter-model comparison other than simple accuracy, we might
+        choose an F1 score or the area under the ROC curve. The chart
+        below shows the area under this curve <i>relative to the base
+          model</i> that uses no </font></font><font face="Source Serif
+      Pro"><font face="Source Serif Pro"><font face="Source Serif Pro"><font
+            face="Source Serif Pro"><font face="Source Serif Pro"><font
+                face="Source Serif Pro">features derived from text. Just
+                as in the chart immediately above, the horizontal line
+                at 0 represents the base model area for each justice.<br>
+                <br>
+              </font></font></font></font><img
+          src="legaleagle_images/base_v_text_auc.png" alt="" width="800"
+          height="373"><br>
+        &nbsp;</font></font><br class="Apple-interchange-newline">
+    <font face="Source Serif Pro"><font face="Source Serif Pro"><font
+          face="Source Serif Pro"><font face="Source Serif Pro">From the
+            foregoing charts it is obvious that our subjects are a
+            highly idiosyncratic population and that finding a singular
+            approach to modeling all of them is far from trivial. It is
+            worth noting that this type of caution is relevant even when
+            modeling more usual population groups. The warnings
+            typically given about committing ecological fallacies
+            applies equally well to fallacies about using uniform model
+            specifications or architectures.<br>
+          </font></font></font></font>
+    <h4><font face="Source Serif Pro"><font face="Source Serif Pro"><font
+            face="Source Serif Pro"><font face="Source Serif Pro">Takeaways</font></font></font></font></h4>
+    <font face="Source Serif Pro"><font face="Source Serif Pro"><font
+          face="Source Serif Pro"><font face="Source Serif Pro">This
+            project yielded mixed, though encouraging, results regarding
+            the ability to model complex outcomes such as Supreme Court
+            justice's votes over myriad cases involving various issues
+            and parties. Adding text features, though not uniformly
+            valuable for all of our subjects, seems nonetheless
+            worthwhile as a general proposition when trying to enhance
+            the capability of models build upon structured data. Indeed,
+            a suggestive pattern from the results here can be seen when
+            comparing the two previous charts: in large measure, the
+            largest gains from the addition of text data were seen for
+            those justices where the base model performed very poorly.
+            It was not within the scope of this project to investigate
+            this pattern fully or scientifically, but at least for this
+            limited study, supplementing a base model built upon
+            structured data with the less traditional text-derived data
+            has generally complemented the models that could benefit
+            from this supplement the most.<br>
+          </font></font></font></font>
+    <h4><font face="Source Serif Pro"><font face="Source Serif Pro"><font
+            face="Source Serif Pro"><font face="Source Serif Pro">Next
+              steps</font></font></font></font></h4>
+    <font face="Source Serif Pro"><font face="Source Serif Pro"><font
+          face="Source Serif Pro"><font face="Source Serif Pro">In the
+            introduction I mentioned the context for this project. In
+            conclusion, let me reiterate that the sprint-like conditions
+            under which this project unfolded did not allow for complete
+            optimization, and I mean optimization in the broadest sense.
+            There are several stages of data preparation and model
+            building that had to be left in "good enough" condition in
+            order to get the entirety completed within time and other</font></font></font></font><font
+      face="Source Serif Pro"><font face="Source Serif Pro"><font
+          face="Source Serif Pro"><font face="Source Serif Pro"><font
+              face="Source Serif Pro"><font face="Source Serif Pro"><font
+                  face="Source Serif Pro"><font face="Source Serif Pro"><font
+                      face="Source Serif Pro"><font face="Source Serif
+                        Pro"><font face="Source Serif Pro"><font
+                            face="Source Serif Pro"> constraints</font></font></font></font></font></font></font></font>
+            (e.g., no budget to improve data sourcing)</font></font></font></font><font
+      face="Source Serif Pro"><font face="Source Serif Pro"><font
+          face="Source Serif Pro"><font face="Source Serif Pro">. With
+            more resources and time I could imagine the following
+            refinements.<br>
+            <br>
+            On a technical level, there are many steps within the
+            modeling pipeline that require refinement. For this project,
+            structured categorical variables were encoded using target
+            encoding. There are other coding schemes we can try, but
+            even within the context of this method, we can further
+            optimize the parameters of the encoding model by rolling
+            this search into an overall hyperparameter search for the
+            entire model pipeline. For now, text documents have been
+            transformed to vectors as input to the classifier via a
+            doc2vec embedding. Within this method, hyperparameters may
+            be further refined, but more interesting still would be to
+            revisit a topic modeling approach. The LDA model tried for
+            this project did not perform well; however, given more time
+            that approach itself could be refined. The newer lda2vec
+            model, which blends elements from dense word embeddings as
+            in word2vec with sparse topic vectors as in LDA, would be a
+            clear approach to explore were the</font></font></font></font><font
+      face="Source Serif Pro"><font face="Source Serif Pro"><font
+          face="Source Serif Pro"><font face="Source Serif Pro"><font
+              face="Source Serif Pro"><font face="Source Serif Pro"><font
+                  face="Source Serif Pro"><font face="Source Serif Pro">
+                    greater computational resources it requires made
+                    available</font></font></font></font>. Beyond
+            preprocessing, more extensive hyperparameter search for each
+            of these 36 classifier models would add a certain
+            performance boost.<br>
+            <br>
+            Of even greater interest than these technical refinements
+            would be moving the preponderance of the text data away from
+            oral arguments and toward the briefs filed with each case.
+            This was my original intent for this project; however,
+            getting access to these briefs before the 2017 term requires
+            a subscription with a paid data provider such as Lexis Nexus
+            or Westlaw, and neither of these was available to me for
+            this effort. Happily, going forward, all submitted briefs
+            will be posted on the court's official web site.<br>
+            <br>
+            Briefs have several advantages over oral arguments as
+            sources of data. First, they allow for a more thorough
+            presentation of each party's basic argument. Second, they
+            contain case citations that can be used as additional inputs
+            to the model. Third, it is not unusual for third parties to
+            file so-called <i>amicus</i> briefs with the court, in
+            which they argue in favor of one of the parties to the case.
+            It is very rare that these third parties are permitted to
+            argue their position orally before the court, so these data
+            do not appear in the oral arguments at all. Also, recall
+            that because of the difficulty of reliably determining on
+            behalf of which party a third party might be advocating,
+            these data were not used in this project even when present.
+            Briefs would make this entire aspect of these cases far more
+            reliable and far more accessible.<br>
+            <br>
+            <br>
+          </font></font></font></font>
+    <hr size="2" width="100%"><font face="Source Serif Pro"><font
+        face="Source Serif Pro"><font face="Source Serif Pro"><font
+            face="Source Serif Pro"><br>
+          </font></font></font></font>
+    <table cellspacing="2" cellpadding="2" width="100%" border="0">
+      <tbody>
+        <tr>
+          <td valign="middle" width="170"><img
+              src="legaleagle_images/ms.jpg" alt="" width="160"
+              height="160"><br>
+          </td>
+          <td valign="middle"><font size="-1">Michael Salwen is a
+              current fellow at Insight Data Science in New York. Before
+              attending Insight he was a Principal Research Scientist at
+              NSI, Inc. and then a Principal at Sharper Insight LLC. In
+              both these positions he focused on quantitative social
+              science modeling and measurement on projects for the
+              Department of Defense. Michael's career also includes
+              teaching mathematics in a New York City public secondary
+              school and time on the faculty at The City College of New
+              York training those who would be mathematics teachers in
+              the city's public schools.<br>
+              <br>
+              He is looking forward to taking his experiences into the
+              next phase as a data scientist in the private or public
+              sector.<br>
+            </font></td>
+        </tr>
+      </tbody>
+    </table>
+    <font face="Source Serif Pro"><font face="Source Serif Pro"><font
+          face="Source Serif Pro"><font face="Source Serif Pro"><br>
+          </font></font> </font> </font>
+  </body>
 </html>
